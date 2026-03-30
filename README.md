@@ -32,3 +32,15 @@ zapier scaffold create contact
 ``` 
 
 Find out more on the latest docs: https://github.com/zapier/zapier-platform/blob/main/packages/cli/README.md.
+
+## Compliance
+
+MultiMail handles regulatory compliance at the infrastructure layer — no Zapier-side code changes needed:
+
+- **EU AI Act Article 50**: Every AI-sent email includes a cryptographically signed `ai_generated` disclosure in the `X-MultiMail-Identity` header
+- **Zapier-triggered sends**: AI disclosure headers are automatically included on all Zapier-triggered sends from AI-operated mailboxes
+- **US State Laws**: Maine, New York, California, Illinois — AI disclosure built into email delivery
+- **CAN-SPAM**: Unsubscribe headers and physical address footers on all outbound email
+- **Formally Verified**: Lean 4 proofs of identity header tamper evidence
+
+See [multimail.dev/use-cases/eu-ai-act-email-compliance](https://multimail.dev/use-cases/eu-ai-act-email-compliance) for details.
